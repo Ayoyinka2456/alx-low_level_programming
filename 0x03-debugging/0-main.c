@@ -4,7 +4,7 @@
  * main - To test if the
  * positive_or_negative function works
  *
- *  Result: 0 if successful, 1 otherwise
+ *  Return: 0 if successful, 1 otherwise
  */
 
 int main(void)
