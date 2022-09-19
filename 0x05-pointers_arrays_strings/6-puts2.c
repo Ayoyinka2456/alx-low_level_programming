@@ -29,4 +29,5 @@ int i;
 
 for (i = 0; i < x; i += 2)
 	_putchar(*(str + i));
+_putchar('\n');
 }
