@@ -1,8 +1,24 @@
 #include "main.h"
 
 /**
- * puts2 - To print every other character in a string
- * @str: The string to be examined
+ * _strlen - To get length of string
+ * @s: String to be examined
+ * Return: 0 always
+ */
+
+
+int _strlen(char *s)
+{
+int x;
+
+x = strlen(s);
+return (x);
+}
+
+
+/**
+ * puts2 - To print very other character
+ * @str: String
  * Returns: 0 always
  */
 
