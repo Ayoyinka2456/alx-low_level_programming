@@ -13,14 +13,14 @@ int i;
 
 if (x % 2 == 0)
 {
-	for (i = (x / 2); i <= x; i++)
+	for (i = (x / 2); i < x; i++)
 		_putchar(*(str + i));
 }
 else
 {
 	int n = ((x - 1) / 2);
 
-	for (i = n; i <= x; i++)
+	for (i = n; i < x; i++)
 		_putchar(*(str + i));
 
 }
