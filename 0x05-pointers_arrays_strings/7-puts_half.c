@@ -1,6 +1,23 @@
 #include "main.h"
 
 /**
+ * _strlen - To get length of string
+ *
+ * @s: String to be examined
+ *
+ * Return: 0 always
+ */
+
+int _strlen(char *s)
+{
+	int x;
+
+	x = strlen(s);
+	return (x);
+}
+
+
+/**
  * puts_half - T print from midway till end of string
  * @str: String to be examined
  * Return: 0 always
