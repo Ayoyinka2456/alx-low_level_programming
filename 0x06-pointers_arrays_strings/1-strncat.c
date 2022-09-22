@@ -14,10 +14,16 @@ char *_strncat(char *dest, char *src, int n)
 	int len1 = strlen(dest);
 	int len2 = strlen(src);
 
-	for (i = 0; i < n; i++)
+	while (i < n && src[i] != '\0')
 	{
 		dest[len1 + i] = src[i];
+		i++;
 	}
+
+	/* To get the new length of the appended dest array */
+	int len3 = strlen(dest);
+
+	dest[len3] = '\0';
 
 	return (dest);
 }
