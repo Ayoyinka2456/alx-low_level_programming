@@ -10,20 +10,22 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int len1 = strlen(dest);
-	int len2 = strlen(src);
+	int i, j;
 
-	while (i < n && src[i] != '\0')
-	{
-		dest[len1 + i] = src[i];
+	i = 0;
+	j = 0;
+
+	while (dest[i] != '\0')
 		i++;
+
+	while (src[j] != '\0' && j < n)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 
-	/* To get the new length of the appended dest array */
-	int len3 = strlen(dest);
-
-	dest[len3] = '\0';
-
+	dest[i] = '\0';
 	return (dest);
+
 }
