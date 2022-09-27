@@ -14,25 +14,17 @@
 char *_strchr(char *s, char c)
 {
 	int i = 0;
-	int j = 0;
-	int k = strlen(s);
-	char d[98];
 
-	while (s[i] != '\0')
+	while (1)
 	{
-	if (s[i] == c)
-	{
-		while (i < k)
+		i  = *s++;
+		if (i == c)
 		{
-			d[j] = s[i];
-			i++;
-			j++;
+			return (s - 1);
 		}
-		break;
+		if (a == 0)
+		{
+			return (NULL);
+		}
 	}
-
-	i++;
-
-	}
-	return (d);
 }
