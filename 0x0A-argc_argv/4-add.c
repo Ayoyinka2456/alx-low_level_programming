@@ -3,14 +3,7 @@
 /**
  * _atoi - converts a string to an integer
  * @s: string to be converted
- * Return: converted integer
- */
-
-/**
- * main - multiplies two numbers
- * @argc: arguments count
- * @argv: arguments vector which is an array of strings
- * Return: 0 means success, 1 means error
+ * Return: converted string
  */
 
 int _atoi(char *s)
@@ -32,16 +25,13 @@ int _atoi(char *s)
 		if (s[i] == '-')
 			++d;
 
-
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			digit = s[i] - '0';
 
 			if (d % 2)
 				digit = -digit;
-
 			n = n * 10 + digit;
-
 			f = 1;
 
 			if (s[i + 1] < '0' || s[i + 1] > '9')
@@ -50,42 +40,48 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-
 	if (f == 0)
 		return (0);
 	return (n);
 }
 
 
-
 /**
- * main- multiplies two numbers
- * @argc: arguments count
- * @argv: arguments vector which is an array of strings
- * Return: 0 means success, 1 means error
+ * main - adds two positive number
+ * @argc: argument counter
+ * @argv: arguments vector array of strings
+ * Return: 0 (Success), or 1 (Success)
  */
 
 int main(int argc, char *argv[])
 {
-	int result, num1, num2;
+	int sum, num, i, j, k;
 
-	if (argc < 3 || argc > 3)
+	sum = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-	printf("Error\n");
-	return (1);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] > '9' || argv[i][j] < '0')
+			{
+				puts("Error");
+				return (1);
+			}
+		}
 	}
+	for (k = 1; k < argc; k++)
+	{
+		num = _atoi(argv[k]);
 
-	num1 = _atoi(argv[1]);
-	num2 = _atoi(argv[2]);
-	result = num1 * num2;
-
-	printf("%d\n", result);
+		if (num >= 0)
+		{
+			sum += num;
+		}
+	}
+	printf("%d\n", sum);
 
 	return (0);
 }
-
-
-
-
 
 
