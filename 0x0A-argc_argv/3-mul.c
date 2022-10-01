@@ -59,7 +59,7 @@ int _atoi(char *s)
 
 
 /**
- * main- multiplies two numbers
+ * main - Prints the multiplication of two numbers, followed by a new line
  * @argc: arguments count
  * @argv: arguments vector which is an array of strings
  * Return: 0 means success, 1 means error
