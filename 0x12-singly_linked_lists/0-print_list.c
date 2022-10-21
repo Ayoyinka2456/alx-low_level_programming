@@ -1,23 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * print_list - Prints all elements of a list_t type
- * @h: The pointer argument of type list_t
- * Return: Number of nodes
+ * print_list - prints all elements of a list_t list.
+ * @h: a pointer to the list to iterato to.
+ * Return: the number of nodes
  */
-
 size_t print_list(const list_t *h)
 {
-	size_t counter = 0;
+	const list_t *tmp;
+	size_t i = 0;
 
-	if (h->str == NULL)
-		printf("[0] (nil)\n");
-
-	while (h)
+	if (h && h->str == NULL)
 	{
-	printf("[%d] %s\n", h->len, h->str);
-	h = h->next;
-	counter++;
+		printf("[0] (nil)\n");
 	}
-	return (counter);
+	else
+	{
+		tmp = h;
+		if (tmp)
+			tmp = h;
+
+		while (tmp)
+		{
+			printf("[%d] %s\n", tmp->len, tmp->str);
+			i++;
+			tmp = tmp->next;
+		}
+	}
+	return (i);
 }
