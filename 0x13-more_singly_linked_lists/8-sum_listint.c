@@ -14,7 +14,7 @@ int sum_listint(listint_t *head)
 
 	if (tmp == NULL)
 	{
-		return (NULL);
+		return ((int *)NULL);
 	}
 	else
 	{
