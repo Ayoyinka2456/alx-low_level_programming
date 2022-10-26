@@ -12,17 +12,10 @@ int sum_listint(listint_t *head)
 	int amt = 0;
 	const listint_t *tmp = head;
 
-	if (tmp == NULL)
+	while (tmp != NULL)
 	{
-		return ((int *)NULL);
-	}
-	else
-	{
-		while (tmp != NULL)
-		{
-			amt += tmp->n;
-			tmp = tmp->next;
-		}
+		amt += tmp->n;
+		tmp = tmp->next;
 	}
 	return (amt);
 }
